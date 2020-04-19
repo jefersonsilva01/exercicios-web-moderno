@@ -1,3 +1,5 @@
+/* 03)​ Crie uma função que recebe dois parâmetros, base e expoente, e retorne a base elevada ao expoente. */
+
 function exponent(base, exponent){
     console.log(base ** exponent)
 }
