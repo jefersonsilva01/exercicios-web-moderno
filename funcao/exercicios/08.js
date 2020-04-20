@@ -23,7 +23,7 @@ function record(points){
     let records = 0
     let bestScore = 0
     
-    for( i = 1; i < arrNumbers.length; i++){
+    for(i = 1; i < arrNumbers.length; i++){
         if(arrNumbers[i] > bestScore){
             records += 1
             bestScore = arrNumbers[i]       
@@ -33,7 +33,7 @@ function record(points){
 
     let lessScore = arrNumbers[0]
 
-    for( i = 1; i <= arrNumbers.length; i++){
+    for(i = 1; i <= arrNumbers.length; i++){
         if(arrNumbers[i] < lessScore){
             lessScore = arrNumbers[i]
         }
