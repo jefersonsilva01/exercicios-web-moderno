@@ -8,26 +8,28 @@ function calculaNotas(valor){
 
     const notas = [100, 50, 10, 5, 1]
 
-    let contador = 0
+    let quantidadeNotas = 0
     let nota = 0
     let resultado = []
-    let i = 0
+    let indice = 0
 
     while (nota < valor){
-        if(valor >= nota + notas[i]){
-            nota += notas[i]
-            contador++
-            resultado[i] = `${contador} nota(s) de R$ ${notas[i].toFixed(2)}`
+        if(valor >= nota + notas[indice]){
+            nota += notas[indice]
+            quantidadeNotas++
+            resultado[indice] = `${quantidadeNotas} nota(s) de R$ ${notas[indice].toFixed(2)}`
         }  else {
-            i++
-            contador = 0
+            indice++
+            quantidadeNotas = 0
         } 
     }
-    for(i = 0; i < resultado.length; i++){
-        if(typeof resultado[i] == 'string'){
-            console.log(resultado[i])
+
+    for(indice = 0; indice < resultado.length; indice++){
+        if(typeof resultado[indice] == 'string'){
+            console.log(resultado[indice])
         }
     }
+    
 }
 
 calculaNotas(18)
