@@ -6,7 +6,7 @@ nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1. */
 
 function calculaNotas(valor){
 
-    const notas = [100, 50, 10, 5, 1]
+    const notas = [100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.10, 0.05]
 
     let quantidadeNotas = 0
     let nota = 0
@@ -32,4 +32,4 @@ function calculaNotas(valor){
 
 }
 
-calculaNotas(18)
+calculaNotas(18.75)
