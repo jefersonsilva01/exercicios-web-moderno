@@ -18,7 +18,7 @@ function money(value){
             result += arrayNumber[i]
         } else if(arrayNumber[i] == '.'){
             result += ','
-            result += arrayNumber[i  + 1]
+            result += arrayNumber[i + 1]
             result += arrayNumber[i + 2]
             break
         }
