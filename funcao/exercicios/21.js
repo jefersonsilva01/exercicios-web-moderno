@@ -3,18 +3,21 @@ considerando que todos pagam R$ 100 mais um adicional conforme a seguinte tabela
 de 10 anos pagam R$80; 2) conveniados com idade entre 10 e 30 anos pagam R$50; 3) conveniados com
 idade acima de 30 e até 60 anos pagam R$ 95; e 4) conveniados acima de 60 anos pagam R$130 */
 
-convenio = function(idade){
+let convenio = function(idade){
 
     if(idade > -1 && idade < 10){
         return `R$ ${(100 + 80).toFixed(2)} `
-    } else if (idade >= 10 && idade <=30 ){
+    } 
+    else if (idade >= 10 && idade <=30 ){
         return `R$ ${(100 + 50).toFixed(2)}`
-    } else if(idade > 30 && idade <=60){
+    }
+     else if(idade > 30 && idade <=60){
         return `R$ ${(100 + 95).toFixed(2)}`
-    } else {
+    }
+     else {
         return `R$ ${(100 + 130).toFixed(2)}`
     }
 
 }
 
-console.log(convenio(10))
+console.log(convenio(15))
