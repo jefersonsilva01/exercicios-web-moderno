@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "axios": "0.17.1"
+    "axios": "0.21.2"
   }
 }
