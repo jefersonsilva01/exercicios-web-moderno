@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="slider">
+    <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="">
+
+  
+    <img src="https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="">
+  
+
+    <img src="https://images.unsplash.com/photo-1604164448130-d1df213c64eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="">
+  </div> 
+
+  <style>
+
+    img {
+      position: absolute;
+      height: 400px;
+      width: 600px;
+      transition: margin-left 2s;
+    }
+
+  </style>
+
+  <script>
+
+    const slider = img => {
+      if(img.style.marginLeft !== '-800px') img.style.marginLeft = '-800px'
+    }
+    
+    const atualizaPagina = img => {
+      const sliders = document.getElementById('slider')
+      img.style.marginLeft = '0px'
+      sliders.prepend(element)
+    }  
+
+    setInterval(() => {
+      const images = Array.from(document.getElementsByTagName('img'))  
+      slider(images[images.length -1])
+      setTimeout(() => atualizaPagina(images[images.length -1]), 1000)
+    }, 1000)
+
+  </script>
+</body>
+</html>
