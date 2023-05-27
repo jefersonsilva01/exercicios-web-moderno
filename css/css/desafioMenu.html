@@ -7,7 +7,94 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: #fff;
+            box-sizing: border-box;
+            font-family: Oswald;
+        }
+
+        .cabecalho {
+            background-color: #33353a;
+            border-bottom: #3b7cee solid 5px;
+            padding: 10px 15px;            
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        img {
+            height: 45px;
+            width: 220px;
+        }
+
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            right: 20px;
+            top: 15px;
+            background-color: #4a4c50;
+            height: 40px;
+            width: 50px;
+            border: solid 1px #6f7277;
+            border-radius: 8px;
+        }
+
+        .menu {
+            bottom: 15px;
+        }
+
+        .menu, ul, li{
+            display: inline;
+            position: relative;
+            left: 15px;            
+        }
+        
+        li > a {
+            padding: 15px 20px;
+        }
+
+        li > a:hover, .active {
+            color: #454950;
+            background-color: #3b7cee;
+        }
+
+        .autenticacao {
+            display: inline;
+            position: fixed;
+            right: 50px;
+            top: 22px;
+        }
+
+        .autenticacao > a{
+            padding: 10px 15px;
+            
+        }
+
+        [href='#registrar'] {
+            background-color: #ff0000;
+            border-radius: 25px;
+        }
+
+        @media (max-width: 800px){
+            .autenticacao {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .menu-toggle {
+                display: inline;
+            }
+
+            .menu {
+                display: none;
+            }
+        }
+
     </style>
 </head>
 
@@ -39,12 +126,25 @@
         </nav>
         <aside class="autenticacao">
             <a href="#login">Login</a>
-            <a href="#registar" class="botao destaque">Registrar</a>
+            <a href="#registrar" class="botao destaque">Registrar</a>
         </aside>
     </header>
 
     <script>
-        // ...
+
+        const links = document.querySelectorAll('a')
+
+        const clearMenu = () => links.forEach(link => 
+        { if(link.hasAttribute('class')) link.removeAttribute('class') });
+        
+        const activeButton = () => 
+        document.querySelector(`li > [href="${window.location.hash}"]`)
+        .setAttribute('class', 'active')
+        
+        const active = () => { clearMenu(), setTimeout(activeButton, 100) }
+        
+        links.forEach(link => link.onclick = active);
+        
     </script>
 </body>
 
