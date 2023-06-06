@@ -20,6 +20,16 @@
             { nome: 'Julia', nota: 9.7 }
         ]
         
-        // ...
+        $('#conteudo').append('<table>')
+
+        $('table').append(pessoas.map(pessoa => 
+            $('<tr>').append(
+                $('<td>').html(pessoa.nome), 
+                $('<td>').html(pessoa.nota) 
+        )))
+                // `<tr>
+                //     <td>${pssoa.nome}</td>
+                //     <td>${pssoa.nota}</td>
+                // </tr>`
     </script>
 </body>
