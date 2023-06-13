@@ -1,7 +1,6 @@
 // coleção dinâminca de pares chave/valor
 const produto = new Object
 produto.nome = 'Cadeira'
-produto.nome = 'Cadeira'
 produto['marca do produto'] = 'Generica'
 produto.preco = 220
 

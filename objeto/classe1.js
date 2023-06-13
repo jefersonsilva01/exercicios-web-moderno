@@ -18,9 +18,7 @@ class CicloFinanceiro {
 
     sumario() {
         let valorConsolidado = 0
-        this.lancamentos.forEach(l => {
-            valorConsolidado += l.valor
-        })
+        this.lancamentos.forEach(l => valorConsolidado += l.valor )
         return valorConsolidado
     }
 }
