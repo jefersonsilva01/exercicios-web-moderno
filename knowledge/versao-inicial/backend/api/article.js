@@ -64,8 +64,7 @@ module.exports = app => {
 
   const getById = (req, res) => {
     app.db('articles')
-      .where({ id: req.params.id })
-      .first()
+      .where({ id: req.params.id }).first()
       .then(article => {
         article.content = article.content.toString()
         return res.json(article)
