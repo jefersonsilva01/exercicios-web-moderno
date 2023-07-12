@@ -11,7 +11,7 @@
               placeholder="Informe o Nome do Usuário..." />
           </b-form-group>
         </b-col>
-                <b-col md="6" sm="12">
+        <b-col md="6" sm="12">
           <b-form-group label="E-mail:" label-for="user-email">
             <b-form-input id="user-email" type="text"
               v-model="user.email" required
@@ -32,7 +32,7 @@
               placeholder="Informe a Senha do Usuário..." />
           </b-form-group>
         </b-col>
-                <b-col md="6" sm="12">
+        <b-col md="6" sm="12">
           <b-form-group label="Confirmação de Senha:" 
             label-for="user-confirm-password">
             <b-form-input id="user-confirm-password" type="password"

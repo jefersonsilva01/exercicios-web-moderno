@@ -1,7 +1,7 @@
 <template>
   <div class="admin-page">
     <PageTitle icon="fa fa-cogs" main="Administração do Sistema" 
-      sub="Cadastro & Cia" />
+      sub="Cadastros & Cia" />
     <div class="admin-pages-tabs">
       <b-card no-body>
         <b-tabs card>

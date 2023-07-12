@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <span>Copyright <strong>Cod3r</strong> &Copyright 2015-2018</span>
+    <span>Copyright <strong>Cod3r</strong> Copyright 2015-2018</span>
   </footer>
 </template>
 
